@@ -1,0 +1,3 @@
+[submodule "build/sim-pipe"]
+	path = build/sim-pipe
+	url = https://github.com/VivekMaran27/SimpleScalar.git
