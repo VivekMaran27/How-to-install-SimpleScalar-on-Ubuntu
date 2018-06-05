@@ -1,0 +1,23 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+In file included from configure:952:0:
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/x86_64-linux-gnu/5/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+configure:1004:1: warning: return type defaults to 'int' [-Wimplicit-int]
+   echo $ac_n "(cached) $ac_c" 1>&4
+ ^
+configure:1321:10: warning: return type defaults to 'int' [-Wimplicit-int]
+In file included from configure:1405:0:
+configure: In function 't':
+configure:1413:10: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+ #include <assert.h>
+          ^
+configure: In function 't':
+configure:1517:5: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   rm -rf conftest*
+     ^

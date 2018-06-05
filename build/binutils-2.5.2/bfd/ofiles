@@ -1,0 +1,1 @@
+archive.o archures.o bfd.o cache.o coffgen.o core.o format.o init.o libbfd.o opncls.o reloc.o section.o syms.o targets.o hash.o linker.o elf.o srec.o coff-ss.o ecoff.o ecofflink.o cpu-ss.o trad-core.o

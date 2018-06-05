@@ -1,0 +1,5 @@
+#!/bin/sh
+# This file was generated automatically by configure.  Do not edit.
+# This directory was configured as follows:
+.././configure --host=i386-pc-linux --target=sslittle-na-sstrix --prefix=/home/vivek/projects/work/200/repos/pipeline_impl_hazard_detect_and_handling_simplescalar/simplescalar/build --with-gnu-as --with-gnu-ld --with-gnu-as --with-gnu-ld --norecursion 
+# 
