@@ -242,10 +242,12 @@ main(int argc, char **argv, char **envp)
   /* register an error handler */
   fatal_hook(sim_print_stats);
 
+  printf("main++: %d\n",argc);
   /* set up a non-local exit point */
   if ((exit_code = setjmp(sim_exit_buf)) != 0)
     {
       /* special handling as longjmp cannot pass 0 */
+      printf("Calling exit_now after setjmp\n");
       exit_now(exit_code-1);
     }
 
@@ -411,12 +413,15 @@ main(int argc, char **argv, char **envp)
   sim_start_time = time((time_t *)NULL);
 
   if (init_quit)
-    exit_now(0);
-
+  {
+      printf("Calling exit_now after init_quit\n");
+      exit_now(0);
+  }
   running = TRUE;
   sim_main();
 
   /* simulation finished early */
+  printf("Calling exit_now after sim_main\n");
   exit_now(0);
 
   return 0;

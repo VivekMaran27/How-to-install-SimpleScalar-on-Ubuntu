@@ -453,7 +453,7 @@ ld_load_prog(char *fname,		/* program to load */
 
 	    if (fseek(fobj, shdr.s_scnptr, 0) == -1)
 	      fatal("could not read `.text' from executable", i);
-	    if (fread(p, shdr.s_size, 1, fobj) < 1)
+	    if (shdr.s_size && fread(p, shdr.s_size, 1, fobj) < 1)
 	      fatal("could not read text section from executable");
 
 	    /* copy program section into simulator target memory */
@@ -503,7 +503,7 @@ ld_load_prog(char *fname,		/* program to load */
 
 	    if (fseek(fobj, shdr.s_scnptr, 0) == -1)
 	      fatal("could not read `.text' from executable", i);
-	    if (fread(p, shdr.s_size, 1, fobj) < 1)
+	    if (shdr.s_size>0 && fread(p, shdr.s_size, 1, fobj) < 1)
 	      fatal("could not read text section from executable");
 
 	    /* copy program section it into simulator target memory */
@@ -538,7 +538,7 @@ ld_load_prog(char *fname,		/* program to load */
   if (!ld_text_base || !ld_text_size)
     fatal("executable is missing a `.text' section");
   if (!ld_data_base || !ld_data_size)
-    fatal("executable is missing a `.data' section");
+//    fatal("executable is missing a `.data' section");
   if (!ld_prog_entry)
     fatal("program entry point not specified");
 
